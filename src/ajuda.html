@@ -28,73 +28,45 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </head>
     <body>
-        <!--Header Mobile-->
-        <nav class="lg:hidden w-full fixed top-0 z-50">
-            <div class="flex items-center py-5 px-3 bg-amareloEscuro shadow lg:flex lg:items-center lg:justify-between">
-                <span class="text-2xl font-[Poppins] cursor-pointer">
-                    <a href="home.html"><img class="h-10 inline" src="./assets/carrologo.png"></a>
+        <!--Header-->
+        <nav class="w-full shadow flex justify-center">
+            <div class="p-4 pb-10 w-full z-30 bg-amareloEscuro">
+                <span class="text-2xl font-[Poppins] cursor-pointer absolute start-10">
+                    <img class="h-10 inline" src="./assets/carrologo2.png">
                 </span>
-                <div class="flex justify-end w-full">
-                    <span class="mb-2 ml-">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M21 6H3C1.9 6 1 6.9 1 8V16C1 17.1 1.9 18 3 18H7V21.23C7 21.84 7.61 22.22 8.17 21.95L13 19H21C22.1 19 23 18.1 23 17V8C23 6.9 22.1 6 21 6Z"
-                                fill="black" />
-                        </svg>
-                    </span>
-                    <span class="mb-2 ml-4">
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="12" fill="#000000" />
-                            <path
-                                d="M12 4C10.34 4 9 5.34 9 7C9 8.66 10.34 10 12 10C13.66 10 15 8.66 15 7C15 5.34 13.66 4 12 4ZM12 12C10.33 12 6 13.34 6 15V16C6 16.55 6.45 17 7 17H17C17.55 17 18 16.55 18 16V15C18 13.34 13.67 12 12 12Z"
-                                fill="#CFA633" />
-                        </svg>
-                    </span>
-                    <span class="text-4xl ml-4 cursor-pointer lg:hidden block">
-                        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-                    </span>
-                </div>
+                <span class="text-3xl cursor-pointer mx-2 absolute end-10 lg:hidden">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
             </div>
+
             <ul
-                class="absolute bg-white lg:bg-amareloEscuro lg:text-center w-full lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-1000px] z-30">
-                <li class="mr-[30px] my-6 lg:my-0 border-b border-black hover:border-amareloClaro duration-500">
+                class="z-20 lg:z-40 absolute lg:top-4 lg:left-1/5 lg:flex bg-white lg:bg-amareloEscuro w-full lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-1000px] transition-all ease-in duration-500">
+                <li class="mx-4 my-6 md:my-0 border-b border-black lg:border-0">
                     <a href="home.html" class="text-xl hover:text-amareloClaro duration-500">Home</a>
                 </li>
-                <li class="mr-[30px] my-6 lg:my-0 border-b border-black hover:border-amareloClaro duration-500">
-                    <a href="comprar.html" class="text-xl hover:text-amareloClaro duration-500">Comprar</a>
+                <li class="mx-4 my-6 md:my-0 border-b border-black lg:border-0">
+                    <a href="#" class="text-xl hover:text-amareloClaro duration-500">Compras</a>
                 </li>
-                <li class="mr-[30px] my-6 lg:my-0 border-b border-black hover:border-amareloClaro duration-500">
+                <li class="mx-4 my-6 md:my-0 border-b border-black lg:border-0">
                     <a href="vendas-1.html" class="text-xl hover:text-amareloClaro duration-500">Vender</a>
                 </li>
-                <li class="mr-[30px] my-6 lg:my-0 border-b border-black hover:border-amareloClaro duration-500">
-                    <a href="alugar.html" class="text-xl hover:text-amareloClaro duration-500">Alugar</a>
+                <li class="mx-4 my-6 md:my-0 border-b border-black lg:border-0">
+                    <a href="#" class="text-xl hover:text-amareloClaro duration-500">Alugar</a>
                 </li>
-                <li class="mr-[30px] my-6 lg:my-0 border-b border-black hover:border-amareloClaro duration-500">
+                <li class="mx-4 my-6 md:my-0 border-b border-black lg:border-0">
                     <a href="ajuda.html" class="text-xl hover:text-amareloClaro duration-500">Ajuda</a>
                 </li>
                 <button
-                    class="md:hidden bg-amareloEscuro text-white font-[Poppins] duration-500 px-6 py-2 hover:bg-amareloEscuro2 rounded ">
+                    class="bg-amareloEscuro lg:hidden mt-4 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-amareloEscuro2 rounded ">
                     Entrar
                 </button>
                 <h2 class=""></h2>
             </ul>
-        </nav>
-        <!--Header Desktop-->
-        <nav class="hidden lg:block bg-amareloEscuro w-full top-0 z-50">
-            <div class="w-full h-fit flex justify-around pr-[45px]">
-                <span class="flex self-center w-fit h-fit">
-                    <img class="scale-50" src="./assets/whats.png" alt="">
-                    <div class="flex-col">
-                        <p class="underline flex-col font-light mt-8">email@gmail.com</p>
-                        <p class="font-bold text-md">(xx)xxxxx-xxxx</p>
-                    </div>
-                </span>
-                <span class="cursor-pointer pt-4">
-                    <a href="home.html"><img class="h-24 inline" src="./assets/carrologo2.png"></a>
-                </span>
-                <div class="flex space-x-6 mt-8">
-                    <span class="pt-4"><!--SAC-->
-                        <a href="sac.html" class="flex">
+
+            <div class="hidden lg:block">
+                <div class="flex space-x-6 absolute lg:z-40 end-10 top-4">
+                    <span><!--SAC-->
+                        <a href="" class="flex">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M21 6H3C1.9 6 1 6.9 1 8V16C1 17.1 1.9 18 3 18H7V21.23C7 21.84 7.61 22.22 8.17 21.95L13 19H21C22.1 19 23 18.1 23 17V8C23 6.9 22.1 6 21 6Z"
@@ -103,8 +75,8 @@
                             <p class="mt-1 ml-1 mr-1">SAC</p>
                         </a>
                     </span>
-                    <span class="pt-4"><!--Login-->
-                        <a href="login.html" class="flex">
+                    <span><!--Login-->
+                        <a href="" class="flex">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="12" cy="12" r="12" fill="#000000" />
                                 <path
@@ -115,32 +87,12 @@
                         </a>
                     </span>
                 </div>
-            </div>
-            <ul class="flex justify-center bg-cinzaEscuro w-full px-5 py-5 text-white space-x-2">
-                <li>
-                    <a href="home.html" class="text-lg py-7 px-4 hover:text-amareloClaro duration-500">Home</a>
-                </li>
-                <li>
-                    <a href="comprar.html" class="text-lg py-7 px-4 hover:text-amareloClaro duration-500">Comprar</a>
-                </li>
-                <li>
-                    <a href="vendas-1.html" class="text-lg py-7 px-4 hover:text-amareloClaro duration-500">Vender</a>
-                </li>
-                <li>
-                    <a href="alugar.html" class="text-lg py-7 px-4 hover:text-amareloClaro duration-500">Alugar</a>
-                </li>
-                <li>
-                    <a href="ajuda.html" class="text-lg py-7 px-4 hover:text-amareloClaro duration-500">Ajuda</a>
-                </li>
-                <h2 class=""></h2>
-            </ul>
-            <div class="flex space-x-4">
 
             </div>
         </nav>
 
         <main class="flex flex-col items-center bg-white z-50">
-            <div class="w-full flex justify-center md:justify-between items-center px-16 h-72 bg-douradoEscuroFraco mt-20 lg:mt-0">
+            <div class="w-full flex justify-center md:justify-between items-center px-16 h-72 bg-douradoEscuroFraco lg:mt-0">
                 <h2 class="text-xl w-52">Boas-vindas à central de ajuda <span class="font-bold">Car Turbo</span></h2>
                 <img src="./assets/fiat-palio-ajuda.png"
                 alt="Fiat Palio"
@@ -156,18 +108,18 @@
             <h1 class="text-preto text-4xl font-bold my-20">Dúvidas Frequentes</h1>
             <div class="lg:h-52 w-2/3">
                 <ol class="h-full list-decimal flex flex-col lg:flex-wrap items-center gap-y-4">
-                    <li class="w-96 font-bold align-bottom list-inside">O que é a Car Turbo?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">Quais serviços são ofertados?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">Como funciona o financiamento?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">Que tipo de veículos estão disponíveis?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">Posso escolher a data de retirada e entrega?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">De que forma é avaliada a reputação dos membros?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">É possível acompanhar a localização do carro em tempo real?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">Como altero dados da minha conta?</li>
-                    <li class="w-96 font-bold align-bottom list-inside">Termos de Uso e Política de Privacidade</li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#1">O que é a Car Turbo?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#2">Quais serviços são ofertados?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#3">Como funciona o financiamento?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#4">Que tipo de veículos estão disponíveis?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#5">Posso escolher a data de retirada e entrega?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#6">De que forma é avaliada a reputação dos membros?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#7">É possível acompanhar a localização do carro em tempo real?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#8">Como altero dados da minha conta?</a></li>
+                    <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#9">Termos de Uso e Política de Privacidade</a></li>
                 </ol>
             </div>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="1" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">1. O que é a Car Turbo?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -176,7 +128,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="2" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">2. Quais serviços são ofertados?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -185,7 +137,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="3" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">3. Como funciona o financiamento?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -194,7 +146,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="4" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">4. Que tipo de veículos estão disponíveis?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -203,7 +155,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="5" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">5. Posso escolher a data de retirada e entrega?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -212,7 +164,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="6" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">6. De que forma é avaliada a reputação dos membros?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -221,7 +173,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="7" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">7. É possível acompanhar a localização do carro em tempo real?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -230,7 +182,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="8" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">8. Como altero dados da minha conta?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -239,7 +191,7 @@
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </section>
-            <section class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+            <section id="9" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">9. Termos de Uso e Política de Privacidade</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
