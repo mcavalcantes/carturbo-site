@@ -92,12 +92,13 @@
         </nav>
 
         <main class="flex flex-col items-center bg-white z-50">
-            <div class="w-full flex justify-center md:justify-between items-center px-16 h-72 bg-douradoEscuroFraco lg:mt-0">
-                <h2 class="text-xl w-52">Boas-vindas à central de ajuda <span class="font-bold">Car Turbo</span></h2>
-                <img src="./assets/fiat-palio-ajuda.png"
-                alt="Fiat Palio"
+            <div class="w-full flex justify-center md:justify-between items-center px-4 md:px-4 lg:px-20 xl:px-48 h-72 bg-douradoEscuroFraco lg:mt-0">
+                <h2 class="text-2xl lg:text-3xl w-60">Boas-vindas à central de ajuda <span class="font-bold">Car Turbo</span></h2>
+                <img src="./assets/carro-exemplo-ajuda.png"
+                alt="Carro exemplo"
                 class="hidden md:block"
-                width="240px"
+                width="360px"
+                style="filter: saturate(80%); filter: grayscale(32%);"
                 />
                 <img src="./assets/sac-letreiro-ajuda.png"
                 alt="SAC Letreiro"
@@ -119,7 +120,201 @@
                     <li class="w-80 sm:w-96 font-bold align-bottom list-inside"><a class="hover:underline" href="#9">Termos de Uso e Política de Privacidade</a></li>
                 </ol>
             </div>
-            <section id="1" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
+
+            <ul class="w-[80vw] md:w-[70vw] divide-y shadow shadow-slate-600 rounded-md my-20">
+                <li id="1">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">1. O que é a Car Turbo?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="2">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">2. Quais serviços são ofertados?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="3">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">3. Como funciona o financiamento?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="4">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">4. Que tipo de veículos estão disponíveis?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="5">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">5. Posso escolher a data de retirada e entrega?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="6">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">6. De que forma é avaliada a reputação dos membros?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="7">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">7. É possível acompanhar a localização do carro em tempo real?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="8">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">8. Como altero dados da minha conta?</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+                <li id="9">
+                    <details class="group py-2">
+                        <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                            <span class="font-bold">9. Termos de Uso e Política de Privacidade</span>
+                        </summary>
+                        <article class="px-4 pb-4">
+                            <p class="px-8 py-1">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
+                                vel turpis feugiatultricies metus at, consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </details>
+                </li>
+            </ul>
+
+            <!-- Seção de FAQ antiga -->
+            <!-- <section id="1" class="w-[80vw] md:w-[70vw] my-4 mx-32 flex flex-col">
                 <h3 class="py-2 font-bold text-2xl">1. O que é a Car Turbo?</h3>
                 <p class="px-8 py-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean 
@@ -199,7 +394,7 @@
                     in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-            </section>
+            </section> -->
 
         </main>
 
