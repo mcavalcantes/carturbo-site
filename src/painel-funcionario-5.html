@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amareloEscuro: '#CFA633',
+                        amareloEscuro2: '#DCB23A',
+                        amareloClaro: '#fABD14',
+                        azul: '#3336FF',
+                        cinza: '#575757',
+                        cinzaEscuro: '#33312D',
+                        cinzaClaro: '#DBDBDB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Garante que o texto dentro da textarea seja alinhado à esquerda */
+        textarea {
+            text-align: left;
+        }
+
+        .bg-amarelo-transparente {
+            background-color: #cfa63333;
+            /* #CFA633 com 20% de opacidade */
+        }
+
+        .quadrado-amarelo::before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #CFA633;
+            margin-right: 8px;
+            border-radius: 20%;
+        }
+
+        .quadrado-cinza::before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #575757;
+            margin-right: 8px;
+            border-radius: 20%;
+        }
+
+        .minimized-sidebar {
+            width: 64px;
+            /* Largura mínima da sidebar */
+            overflow: hidden;
+        }
+
+        .amarelo {
+          filter: invert(38%) sepia(86%) saturate(584%) hue-rotate(2deg) brightness(95%) contrast(90%);
+        }
+
+        .debug {
+            border: 1px solid red;
+        }
+    </style>
+    <title>Sidebar</title>
+
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="w-full shadow flex justify-center">
+        <div class="p-4 pb-10 w-full z-30 bg-amareloEscuro">
+            <span id="menuIcon" class="text-3xl cursor-pointer mx-2 absolute end-10 lg:hidden">
+                <ion-icon name="menu"></ion-icon>
+            </span>
+        </div>
+
+        <h2 class=""></h2>
+        </ul>
+
+        <div class="hidden lg:block">
+            <div class="flex space-x-6 absolute lg:z-40 end-10 top-4">
+
+                <span><!--Login-->
+
+                    <img class="h-10 inline" src="assets/carrologo2.png">
+
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <div id="sidebar"
+            class="shrink-0 fixed lg:static top-0 left-0 h-screen p-4 transition-transform duration-300 lg:w-1/4 w-full lg:translate-x-0 -translate-x-full z-20">
+            <nav class="mt-10">
+                <a href="#" class="block py-2.5 px-4 rounded transition-transform duration-200 transform hover:scale-95 hover:bg-gray-300 hover:text-white flex items-center">
+                    <img src="assets/telephone.svg" alt="Histórico de transações" class="w-6 h-6 mr-2">
+                    Chamados clientes
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition-transform duration-200 transform hover:scale-95 hover:bg-gray-300 hover:text-white flex items-center">
+                    <img src="assets/calendario.svg" alt="Histórico de transações" class="w-6 h-6 mr-2">
+                    Aluguéis ativos
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition-transform duration-200 transform hover:scale-95 hover:bg-gray-300 hover:text-white flex items-center">
+                    <img src="assets/question.svg" alt="FAQ" class="w-6 h-6 mr-2">
+                    FAQ
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition-transform duration-200 transform hover:scale-95 hover:bg-gray-300 hover:text-white flex items-center">
+                    <img src="assets/megaphone.svg" alt="Histórico de transações" class="w-6 h-6 mr-2">
+                    Anúncios criados
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition-transform duration-200 transform bg-amarelo-transparente text-[#CFA633] flex items-center">
+                    <img src="assets/hourglass.svg" alt="Histórico de transações" class="w-6 h-6 mr-2 amarelo">
+                    Histórico de transações
+                </a>
+            </nav>
+        </div>
+        <section class="flex-grow bg-cinzaClaro overflow-y-scroll p-12">
+            <h2 class="text-2xl font-bold pb-12">Transações Realizadas</h2>
+            <div id="table-container" class="flex flex-col">
+                <span id="table-heading" class="h-12 bg-amareloEscuro flex rounded-t-md">
+                    <p class="w-1/5 p-1">Código da venda</p>
+                    <p class="w-2/5 p-1">Veículo</p>
+                    <p class="w-1/5 p-1">Valor</p>
+                    <p class="w-1/5 p-1">Status</p>
+                </span>
+            </div>
+        </section>
+    </div>
+
+
+    <!--Footer Desktop-->
+    <div class="bg-black pt-2 pb-2 hidden lg:block z-50 bottom-0 relative">
+        <div class="flex items-center justify-center ">
+            <p class="text-[10px] text-white font-bold md:text-[12px]">
+                © 2024 - 2024 Car Turbo CNPJ: xx.xxx.xxx/xxxx-xx
+                Todos os direitos Reservados.
+            </p>
+        </div>
+    </div>
+
+    <!--Footer Mobile-->
+    <div class="bg-black w-full lg:hidden -z-20 bottom-0 relative">
+        <div class="flex items-center justify-center ">
+            <p class="text-[8px] text-white font-bold md:text-[8px]">
+                © 2024 - 2024 Car Turbo CNPJ: xx.xxx.xxx/xxxx-xx
+                Todos os direitos Reservados.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rectangles = document.querySelectorAll('[id^="rectangle"]');
+            const sidebar = document.getElementById('sidebar');
+            const menuIcon = document.getElementById('menuIcon');
+
+            let sidebarOpen = false;
+
+            // Código para alternar a expansão dos retângulos
+            rectangles.forEach(rectangle => {
+                let expanded = false;
+
+                rectangle.addEventListener('click', () => {
+                    const textarea = rectangle.querySelector('textarea');
+
+                    if (expanded) {
+                        rectangle.classList.remove('w-full', 'h-96');
+                        rectangle.classList.add('w-full', 'lg:h-10');
+                        textarea.classList.add('hidden');
+                    } else {
+                        rectangle.classList.remove('w-full', 'lg:h-10');
+                        rectangle.classList.add('w-full', 'h-96');
+                        textarea.classList.remove('hidden');
+                    }
+                    expanded = !expanded;
+                });
+            });
+
+            // Código para alternar a visibilidade da sidebar
+            menuIcon.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+                sidebar.classList.toggle('translate-x-0');
+                sidebarOpen = !sidebarOpen;
+
+                // Alternar o ícone entre menu e close
+                const icon = menuIcon.querySelector('ion-icon');
+                icon.name = sidebarOpen ? 'close' : 'menu';
+            });
+        });
+    </script>
+</body>
+
+</html>
