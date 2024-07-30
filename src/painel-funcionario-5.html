@@ -24,6 +24,11 @@
             }
         }
     </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
     <style>
         /* Garante que o texto dentro da textarea seja alinhado à esquerda */
         textarea {
@@ -74,6 +79,40 @@
 </head>
 
 <body>
+    <!-- React p/ renderizar as linhas da tabela de uma forma menos estúpida -->
+    <script type="text/babel">
+        const TRANSACOES = [
+            {codigo: "A", veiculo: "Fiat Mobi 1.0", valor: "40.000,00", status: "CONFIRMADO"},
+            {codigo: "B", veiculo: "Fiat Uno 1.0", valor: "35.999,00", status: "CONFIRMADO"},
+            {codigo: "C", veiculo: "Honda Civic 1.5", valor: "139.900,00", status: "PENDENTE"},
+            {codigo: "D", veiculo: "Volkswagen Gol 1.0", valor: "55.990,00", status: "CONFIRMADO"},
+            {codigo: "E", veiculo: "Toyota Corolla 2.0", valor: "107.900,00", status: "NEGADO"},
+            {codigo: "F", veiculo: "Volkswagen Golf 1.6", valor: "44.490,00", status: "PENDENTE"},
+            {codigo: "G", veiculo: "Honda Fit 1.4", valor: "47.900,00", status: "CONFIRMADO"},
+        ];
+
+        const LISTA_TRANSACOES = TRANSACOES.map((item) => (
+            <li>
+                <span class="text-sm lg:text-lg h-12 bg-white flex border-b-2 border-x-2 border-cinzaEscuro">
+                    <p class="w-1/5 p-1">{item.codigo}</p>
+                    <p class="w-2/5 p-1">{item.veiculo}</p>
+                    <p class="w-1/5 p-1">{item.valor}</p>
+                    {item.status === "CONFIRMADO" ? <p class="text-[0.5rem] sm:text-sm font-bold w-1/5 p-1 text-green-600">{item.status}</p> : 
+                     item.status === "PENDENTE" ? <p class="text-[0.5rem] sm:text-sm font-bold w-1/5 p-1 text-yellow-600">{item.status}</p> : 
+                     <p class="text-[0.5rem] sm:text-sm font-bold w-1/5 p-1 text-red-600">{item.status}</p>
+                    }
+                </span>
+            </li>
+        ));
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(
+            <ul>
+                {LISTA_TRANSACOES}
+            </ul>
+        );
+    </script>
+
     <!--Header-->
     <nav class="w-full shadow flex justify-center">
         <div class="p-4 pb-10 w-full z-30 bg-amareloEscuro">
@@ -100,7 +139,7 @@
     <div class="flex">
         <!-- Sidebar -->
         <div id="sidebar"
-            class="shrink-0 fixed lg:static top-0 left-0 h-screen p-4 transition-transform duration-300 lg:w-1/4 w-full lg:translate-x-0 -translate-x-full z-20">
+            class="bg-white shrink-0 fixed lg:static top-0 left-0 h-screen p-4 transition-transform duration-300 lg:w-1/4 w-full lg:translate-x-0 -translate-x-full z-20">
             <nav class="mt-10">
                 <a href="#" class="block py-2.5 px-4 rounded transition-transform duration-200 transform hover:scale-95 hover:bg-gray-300 hover:text-white flex items-center">
                     <img src="assets/telephone.svg" alt="Histórico de transações" class="w-6 h-6 mr-2">
@@ -124,15 +163,16 @@
                 </a>
             </nav>
         </div>
-        <section class="flex-grow bg-cinzaClaro overflow-y-scroll p-12">
+        <section class="flex-grow bg-cinzaClaro overflow-y-scroll p-4 sm:p-6 md:p-8 lg:p-12">
             <h2 class="text-2xl font-bold pb-12">Transações Realizadas</h2>
             <div id="table-container" class="flex flex-col">
-                <span id="table-heading" class="h-12 bg-amareloEscuro flex rounded-t-md">
+                <span id="table-heading" class="py-2 font-bold bg-amareloEscuro flex rounded-t-md border-2 border-cinzaEscuro">
                     <p class="w-1/5 p-1">Código da venda</p>
                     <p class="w-2/5 p-1">Veículo</p>
-                    <p class="w-1/5 p-1">Valor</p>
+                    <p class="w-1/5 p-1">Valor (R$)</p>
                     <p class="w-1/5 p-1">Status</p>
                 </span>
+                <div id="root"></div>
             </div>
         </section>
     </div>
